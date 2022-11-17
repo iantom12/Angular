@@ -1,0 +1,65 @@
+<h1>Sign Up Form</h1>
+<!-- <form (ngSubmit)="onSubmit()">
+  <div class="form-group">
+    <label>Name:</label>
+      <input type="text" class="form-control" id="formGroupName" placeholder="Enter Name">
+      <div
+      *ngIf="myForm.get('name').invalid && (myForm.get('name').dirty || myForm.get('name').touched)">
+        <span *ngIf="myForm.controls.name.errors.required"> *Field is mandatory.</span>
+        <span *ngIf="myForm.controls.name.errors.pattern"> *Field is invalid.</span>
+      </div>
+    
+  </div>
+  <div class="form-group">
+    <label>
+      Email:
+      <input type="text" class="form-control" id="formGroupEmail" placeholder="Enter Email">
+    </label>
+    <div class="form-group"
+      *ngIf="myForm.get('email').invalid && (myForm.get('email').dirty || myForm.get('email').touched)">
+      <span *ngIf="myForm.controls.email.errors.required"> *Field is mandatory.</span>
+      <span *ngIf="myForm.controls.email.errors.pattern"> *Field is invalid.</span>
+    </div>
+  </div>
+  <div class="form-group">
+    <label>
+      Phone Number:
+      <input type="text" class="form-control" id="formGroupPhoneNumber" placeholder="Enter Phone Number">
+    </label>
+    <div class="form-group"
+      *ngIf="myForm.get('phoneNumber').invalid && (myForm.get('phoneNumber').dirty || myForm.get('phoneNumber').touched)">
+      <span *ngIf="myForm.controls.phoneNumber.errors.required"> *Field is mandatory.</span>
+      <span *ngIf="myForm.controls.phoneNumber.errors.pattern"> *Field is invalid.</span>
+    </div>
+  </div>
+  <div class="form-group">
+    <label>
+      Password:
+      <input type="password" class="form-control" id="formGroupPassword" placeholder="Enter Password">
+    </label>
+    <div class="form-group" *ngIf="myForm.controls.password.touched && myForm.controls.password.invalid">
+      <span *ngIf="myForm.controls.password.errors.required"> *Field is mandatory.</span>
+      <span *ngIf="myForm.controls.password.errors.pattern"> *Field is invalid.</span>
+    </div>
+  </div>
+  <div class="buttons">
+    <button mat-raised-button color="primary" type="submit" (click)="onSubmit()"
+      [disabled]="!(myForm.valid && myForm.dirty)">Sign up</button>
+  </div>
+</form> -->
+
+<form>
+
+  <form class="loginform" [formGroup]="loginform">
+      <input type="text" class="form-control" placeholder="username" formControlName="username"><br>
+      <span *ngif="username?.invalid && username?.touched">*Username is required</span>
+      <input type="email"  class="form-control" placeholder="Enter email" formControlName="email"><br>
+      <span *ngIf="email?.invalid && email?.touched">*Email is required</span>
+      <input type="text" class="form-control" placeholder="0000000000" formControlName="phone"><br>
+      <span *ngIf="phone?.invalid && phone?.touched">*Phone number is required</span>
+      <input type="password" class="form-control" placeholder="Enter Password" formControlName="password"><br>
+      <span *ngIf="loginform.controls.password.touched && loginform.controls.password.invalid">*Password is required</span>
+      <button mat-raised-button color="primary" type="submit" (click)="onSubmit()"
+      [disabled]="!(loginform.valid && loginform.dirty)">Sign up</button>
+  </form>
+</form>

@@ -1,0 +1,30 @@
+.formControl{
+    text-align: center;
+}
+.loginform{
+    margin:5px;
+    flex: 1 1 auto;
+    width:auto;
+    text-align: center;
+}
+
+input{
+    text-align: left;
+    margin: 2px;
+    text-align: center;
+}
+
+button{
+    margin: 5px;
+}
+
+input.ng-invalid {
+    border-bottom: 5px solid red;
+}
+
+input.ng-valid {
+    border-bottom: 5px solid green;
+}
+h1{
+    text-align: center;
+}
